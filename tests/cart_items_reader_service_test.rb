@@ -58,11 +58,6 @@ class CartItemsReaderServiceTest < Minitest::Test
     cart_items3 = CartItemsReaderService.call(file_name)
     receipt = cart_items3.generate_receipt
 
-    puts receipt
-    puts ''
-    puts result
-    puts result == receipt
-
     assert_equal result, receipt
   end
 end
